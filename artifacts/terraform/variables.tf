@@ -1,13 +1,13 @@
 variable "profile" {
-  default = "terraform_iam_user"
+  default = "cnd"
 }
 
 variable "region" {
-  default = "ap-southeast-1"
+  default = "us-east-1"
 }
 
 variable "instance" {
-  default = "t2.nano"
+  default = "t2.micro"
 }
 
 variable "instance_count" {
@@ -15,11 +15,11 @@ variable "instance_count" {
 }
 
 variable "public_key" {
-  default = "~/.ssh/MyKeyPair.pub"
+  default = "~/.ssh/id_rsa.pub"
 }
 
 variable "private_key" {
-  default = "~/.ssh/MyKeyPair.pem"
+  default = "~/.ssh/id_rsa"
 }
 
 variable "ansible_user" {
@@ -30,12 +30,10 @@ variable "amis" {
   type = "map"
 
   default = {
-    ap-northeast-1 = "ami-b25d44b3" # Asia Pacific (Tokyo)
-    ap-southeast-1 = "ami-aeb49ffc" # Asia Pacific (Singapore)
-    ap-southeast-2 = "ami-6b770351" # Asia Pacific (Sydney)
+    us-east-1 = " ami-07ebfd5b3428b6f4d" 
   }
 }
 
 variable "ami" {
-  default = "ami-0c5199d385b432989"
+  default = " ami-07ebfd5b3428b6f4d"
 }
