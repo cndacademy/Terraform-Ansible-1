@@ -17,9 +17,11 @@
         repo: deb https://pkg.jenkins.io/debian-stable binary/ 
         state: present
 
-    - name: Install Jenkins
+    - name: Install Jdk and jenkins
       apt:
-        name: jenkins
+        name: 
+           - openjdk-8-jdk
+           - jenkins
         state: present
 
     - name: Start & Enable Jenkins
